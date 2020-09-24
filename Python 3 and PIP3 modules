@@ -1,0 +1,27 @@
+!#/bin/bash
+
+###################################
+#Author: Galo Viteri            ###
+#Description:                   ###
+#Install python3 and pip modules###
+#(cloudstorage, avro, etc.)     ###
+###################################
+
+echo "1 - Installing Python 3"
+  apt-get update
+  apt-get install python3.6
+  
+echo "2 - Linking Python 3 binary to Python"
+  alias python=python3
+  
+echo "3 - Validating Python version"
+  python --version
+  
+echo "4 - Installing PIP3"
+  sudo apt install python3-pi
+  
+echo "5 - Installing PIP3 package"
+  for pippackage in cloudstorage avro-python3
+    do
+      pip3 install ${pippackage}
+  done
