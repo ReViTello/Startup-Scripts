@@ -9,7 +9,7 @@
 
 echo "1 - Installing Python 3"
   apt-get update
-  apt-get install python3.6
+  apt-get install python3.6 -y
   
 echo "2 - Linking Python 3 binary to Python"
   alias python=python3
@@ -18,7 +18,7 @@ echo "3 - Validating Python version"
   python --version
   
 echo "4 - Installing PIP3"
-  sudo apt install python3-pi
+  sudo apt install python3-pip -y
   
 echo "5 - Installing PIP3 package"
   for pippackage in cloudstorage avro-python3
